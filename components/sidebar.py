@@ -77,13 +77,12 @@ def render_sidebar():
         )
 
         rename_columns = [
+            col
 
-    col
+            for col in st.session_state.df.columns
 
-    for col in st.session_state.df.columns
-
-    if not col.startswith("_")
-]
+            if not col.startswith("_")
+        ]
 
     if rename_columns:
 
